@@ -1,0 +1,331 @@
+/* global style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppiens', sans-serif;
+    scroll-behavior: smooth;
+}
+:root {
+    --main-transition: .5s;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.container {
+    margin: 0 auto;
+    padding: 15px auto;
+}
+.main-title {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    padding: 10px;
+    position: relative;
+}
+.main-title::before {
+    content: '';
+    width: 135px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    transform: translate(10px, 40px);
+    -webkit-transform: translate(10px, 40px);
+    -moz-transform: translate(10px, 40px);
+    -ms-transform: translate(10px, 40px);
+    -o-transform: translate(10px, 40px);
+}
+.main-title::after {
+    content: '';
+    width: 65px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    transform: translate(-120px, 40px);
+    -webkit-transform: translate(-120px, 40px);
+    -moz-transform: translate(-120px, 40px);
+    -ms-transform: translate(-120px, 40px);
+    -o-transform: translate(-120px, 40px);
+}
+span{
+    color: #888888;
+}
+.main-page .setting .box{
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 5px black ;
+}
+.main-page .setting  .container .head {
+    margin:10px;
+line-height: 1.7;
+}
+.main-page .setting  .container .head h3{
+    font-size: 28px;
+    font-weight: 800;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+/* end global style */
+/* start setting */
+.main-page .setting {
+    width: 100%;
+    background-color: #f1f5f9;
+    box-shadow: 0  0 5px rgb(145, 145, 145) inset ;
+}
+.setting .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+    gap: 20px;
+    padding: 10px 20px;
+    text-transform: capitalize;
+}
+@media (max-width:771px) {
+    .setting .container {
+        display: grid;
+        grid-template-columns:minmax(300px,1fr);
+    }
+}
+.main-page .setting  .container .site-control .content{
+    display:flex ;
+     align-items: center;
+     justify-content: space-between;
+}
+.main-page .setting  .container .site-control .content p {
+   font-size: 20px;
+   margin: 10px 0;
+}
+.main-page .setting  .container .site-control textarea{
+margin: 20px 0;
+width: 100%;
+padding: 10px 5px;
+text-transform: capitalize;
+letter-spacing: 1px;
+resize: none;
+}
+/* end setting */
+/* start general info */
+.main-page .setting .container .general form{
+display: flex;
+flex-direction: column;
+gap: 10px;
+color: #888888;
+margin: 20px 10px;
+}
+.main-page .setting .container .general form input{
+    width: 100%;
+    padding: 10px ;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    outline: none;
+    border: 1px solid #888888;
+    margin-bottom: 20px;
+}
+.main-page .setting .container .general form input::placeholder{
+    text-transform: capitalize;
+padding:10px;
+}
+.main-page .setting .container .general form .email{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-page .setting .container .general form .email .info{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    opacity: .5;
+}
+.main-page .setting .container .general form .email .info input{
+    margin: 10px 0;
+    cursor:not-allowed ;
+}
+.main-page .setting .container .general form .email a{
+    color: #0075ff;
+    font-weight: 700;
+}
+.main-page .setting .container .general form .email a:hover{
+    color: #0355b3;
+}
+/* end general info */
+/* start security info */
+.main-page .setting .container .security .content li .info {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin: 20px;
+}
+.main-page .setting .container .security .content li .info .text {
+ margin: 10px 0;
+line-height: 1.8;
+}
+.main-page .setting .container .security .content li .info .button a {
+    background-color: #0075ff;
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.main-page .setting .container  .security .content li .info a:hover{
+    background-color: #0355b3;
+}
+/* end security info */
+/* start social info */
+.main-page .setting .container .social .content ul li{
+    display: flex;
+    background-color: #ccc;
+    padding: 10px;
+    border-radius:5px ;
+    -webkit-border-radius:5px ;
+    -moz-border-radius:5px ;
+    -ms-border-radius:5px ;
+    -o-border-radius:5px ;
+    border: 1px solid #888888;
+    margin-bottom: 20px;
+}
+.main-page .setting .container .social .content ul li i{
+    padding: 10px;
+    color: #888888;
+    border-right: 1px solid #888888;
+}
+.main-page .setting .container .social .content ul li input{
+ text-transform: capitalize;
+   padding: 8px;
+   background-color: transparent;
+   outline: none;
+   border: none;
+   width: 100%;
+   border-radius:5px ;
+   -webkit-border-radius:5px ;
+   -moz-border-radius:5px ;
+   -ms-border-radius:5px ;
+   -o-border-radius:5px ;
+}
+.main-page .setting .container .social .content ul li:hover i{
+ color: black;
+}
+/* end social info */
+/* start widgest */
+.main-page .setting .container .backup .content .radio,
+.main-page .setting .container .widgets .content .check,
+.main-page .setting .container .widgets .content{
+margin: 10px ;
+padding: 5px;
+}
+.main-page .setting .container .backup .content .radio label,
+.main-page .setting .container .widgets .content .check label{
+    cursor: pointer;
+    font-size: 19px;
+}
+.main-page .setting .container .backup .content .radio label input:hover,
+.main-page .setting .container .widgets .content .check label input:hover{
+   color: #0075ff;
+}
+.main-page .setting .container .backup .content .radio label input,
+.main-page .setting .container .widgets .content .check label input {
+accent-color: #0075ff;
+}
+/* end widgest */
+/* start backup */
+.main-page .setting .container .backup .content form{
+    border-bottom: 1px solid #888888;
+    margin: 10px;
+    padding: 20px 10px;
+}
+.main-page .setting .container .backup .serves{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+.main-page .setting .container .backup .serves .serve1{ 
+    display: flex;  align-items: center; flex-direction: column; margin: 10px 10px; padding: 20px 10px; cursor: pointer; border: 1px solid  #ccc; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px;
+    width: 100px;
+}
+.main-page .setting .container .backup .serves .serve1:hover{
+   color: #0075ff;
+   border:1.5px solid #0075ff;
+}
+.main-page .setting .container .backup .serves .serve1 i{
+    margin-bottom: 10px;
+}
+/* end backup */
+

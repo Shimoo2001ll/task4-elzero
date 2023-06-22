@@ -60,7 +60,7 @@ a {
 nav {
     height: 100vh;
     width: 200px;
-    background-color: white;
+    background-color: rgb(255, 254, 254);
     padding: 20px 15px;
     text-transform: capitalize;
     position: relative;
@@ -140,7 +140,6 @@ header .container {
 }
 header .container .drop {
     display: none;
-    
 }
 header .container .search {
     display: flex;
@@ -381,6 +380,7 @@ header .container .bio i::after {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    resize: none;
 }
 .dashboard .container .box .content input,
 .dashboard .container .box .content textarea :placeholder-shown{
